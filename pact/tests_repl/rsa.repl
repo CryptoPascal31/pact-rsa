@@ -1,0 +1,354 @@
+(load "../contracts/rsa.pact")
+
+
+(let ((pub-key "4awll3h9p6DgSRl3i6YatJGGhs7mXPepwTZJ9G61IgejrHrZhn-cexS9XWsj288p3634jYGCc8WRhvbNH3iAcMFRVnJmw4UmZhn7s5QEojBaci1o45yh_sgIBWYQAzVpbRjPSjLQdbm7AmZyC-6F7EQToIQF2f4xkuy8WiIRFV8")
+      (key-len 1024)
+      (pub-exp "BQ")
+      (sig "w5l9fFH0AQWrcDnCO8b3Y5bV7YCyRYpNbDp3psCVJ8JtiHUwWqH65LjAZOe0xkq5IBS90DFdUw7KX6CsU6Cn-s7dwKw0aVvilTdPweGRVszQve-e3CjU7u_CJY8D9LBjxIOzyAkqfIrewQF5Ozk2GC0DVkjJ4HKNk_A9LNt6Qeo"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xcbeb408965b28a47f903278cb133b5be3585fb4a2b8916b9c938142d500ee097fcab5154f3874a139383dd62caf9ffd9230b3f44ed2fe364361bb342d8c3db498692e78b70f919c3d6fa76865bd6dd3c9411495406e2270ee3d80d04067c41b022d35b02f631f0cab81767899caea3e6a0f8c9ee6b681923606d126df5f6117f")
+      (key-len 1024)
+      (pub-exp "0x05")
+      (sig "0x38e7b5430a646289515894f84ff328ff9ee7ff729f99684a830d98c97ce162ef14927deb90c0964ddf3b2d0ae40b41caea744410aba0d0c2c27939e2094df0ca03940b7fcd77024c8888c194f94d09130a8b31958f70726b9f732258fddc6b9e726797fb0153a3ce970a505856569f7c9709a5c2da6e1bdd975ec0b1b5f0842f"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "sUmtk0HvBt5eYOzAksb75l6EOw6HHfWY5ycoey-gkPhX7cIQi4crRuhoWUPeJcPZ3v5BbhniUD9YQiCYF3MHAXQf6g1hlR6wJX5DXrKTu2JuGlGMsmJ-rPZzS9vdRKcIdJ9FGhcaffZgeD14brbCFtVkhHAQcxrAuj8eKJfCN1k")
+      (key-len 1024)
+      (pub-exp "EQ")
+      (sig "ZMrAs23xQiquXLEqrhpJmNVC6G5uE2m_t6MEyPYnHr2P-Hdc5QEEfDKZcwV_yNvAXuINLMOWPNafjqjnYSc7yImwr_Fv9ASS75PaYb0N3cNgCT1n3LHTb_OnhkTObr7pSfOfcCQ_6JIvcPXXwe6SNWts6y_s7lUVO9tMaaUcZgg"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xaecf347161e52cad2240dedd91e952aed0cecb6a7bc9330ede065e65c270d3660e92990fb824a648f228520419a7b75dc6684d91aa216383695600e5cb71d942a52d71f1687f94c72abbddba1ec1a96f4034d4d645ae82ae0081a5a433f16ea1d050bfda60c9e4f5d95b6bc1d2e19baef7cf4c1fe754e6bcdbdf98079fa28391")
+      (key-len 1024)
+      (pub-exp "0x11")
+      (sig "0x7f5f5b0dd6b33d265dcf0ea93433fa8a5b0d86570f2951fae4edcaaae332dbd57913dae138447e5fef3f188dc209fde4e2200ac0bd78033a51ae5d388d3674a08f79b32a34f16ae6874bdeb34ec720caa5dca95044979b7f61ff4348785e7fa315feb1724c8dcc17274764dab188a83a5bba4013828901a19762abb87d55ec1a"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "m2M2VO4cAas7hbut1K1qhjLd6BzCRD8B8ddy2jYwaqxViObf1KuBrwcOcagxTIJDi9v76jFOUehWx_yA-_gjCPAUlTaeQGk2F5p4BoERtsxwOi4p_OsVC-KFnLuIAntRTtVHFI6lTF8W2BmY4ekHxEv4pbX_0jfCBE_Ggok1rik")
+      (key-len 1024)
+      (pub-exp "AQE")
+      (sig "BBi1KXKdEhMRAx1twTjLoAuzFOD_3Ump-dDXau00VCceayUbgFrEZeZTMVPDIIxP0pRyMORjGdWO4xUYPjxrOGval-Vyt57o3vv1Qh_e82bgGsq07f3I4YPAFlOCCuUA0yEvmLBPCm8qY-Di8zCqHIBDmTyFeiK4PK0mmyPbG4Q"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0x993635be06308a4ff9ecb92b85ff0e974275134c07d41c1f69d60718ba6c2d34f8c08e632b87eb0eafae1aa830e5f23eb1c6829196d4f8251c64d8d45435e741f2b0258d861962521aae25ab89f37031d9bf3db2593ebb56d5604498d1a4ae01651f260fafc81f1e9f26b68101cb24f2758010dd5efa4fd9774585b4371bdf21")
+      (key-len 1024)
+      (pub-exp "0x0101")
+      (sig "0x7452e67e577b853e6fd2149f9b61df556b12d5708f07b0eeb5dca41e4d646444b88ae7766fab9eb1c866c34a794b3b8b174dc8ac4ef06bb7bd5c39799793e2ba190321c7d287331310a151005aac78f62f2570cb54666c1b5aed4756fba4a4b318d6ef19f717214ef80abfbbaae1fcd95a02663eaa3b7fb0abd114b65cd74604"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "wojrSrOthe9R8Qh8FgFY_lEvE1fnx3raYMQ9Fw0dWJ5M_AhNsbzJGsUIbrADfLxKxdVoBCb6CWkJ7x8KxdN6SuRIzqXnGMFfT4ef7SmO9PuSK7aqVgj2rMn24y-BV0MWLCHtt_KzyjjyTwF4_2i549Z6ED0LcVydYAYIsjjEcMs")
+      (key-len 1024)
+      (pub-exp "AQAB")
+      (sig "Pz0UJ2a2rVF1XH1Gse_P6iMnBQecvsP2ysrhkMqhVq47zrPZykmFOAy98C0mQjzTMvbCIF4rmJy03-uJ8GEd59P3kfV2AIDka4RRtZnGoJGD3EvPsHRm5ffUil9eEuF8zKi7ARutNsCPBq8pvgoKqs1MPaD-NfaBIm6_nx4NYt4"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xa95d651d7461d36601e26200e845d833712e976b1495c0577f4babd29e277ab2becbdd30b666919ba8c0f6b6d924d11a0abf7045d0726d2d724eaf8a2822f75d6048fab25e37f7254c5a282313477cb5fc09b849b2a13eedd6392ef61c208d3bae7002a20ff3306d8704209aa81292637ec1f379362bb2d5dec5208b75fde41b")
+      (key-len 1024)
+      (pub-exp "0x010001")
+      (sig "0x27d7321d5c75cf9b90a68551cf3343fb900b06a61855e02f92b8b320dfabbf2a98b7ff9b0ef863ee80360af12908942a8bef5849f4a3c8608565feec3f21dbedc231c2ef8d24ef6762c82b6262f121e9aee4a3a63008e4f6375c9039207e5f8e57a84af65ea8f2674b4ed12ff2c3be74dbd8e9abfa5254c3e112145a0bb1091b"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "m-nUX7tDcg7SU_ezQtrbPkDP9lgsNFs8eJK1zJiWKEoaPyzf8GutmhwKlxWGKd8Lf2ZtrHgLRlS8C1M3tjLPI4wbGWDF6KRM3TG0LJwuItTzor5T0EhaY8-wNNrR1Do6dJXfzyHE1g6FMNlrK4aIAMTiMA2k7e6E9Wi1H8ISzakfjQI4wwbmd06U_is0KqL3MAYRd8bJoopmh1hOWDT0MXAI6UACf4aY7yc4-iykCi9iYRkZDi08Aq1Jr_zrvTgBi45J-saE2IgtELqDT2eRokRlTImN51_j75Asrwr4St1MUar2G2_8fnHbNlV42ev8SJxCWlDuLHO-9r-2muTdHw")
+      (key-len 2048)
+      (pub-exp "BQ")
+      (sig "Y0uDfEj2tbfJmlIJwu6pvAPAzSOZBH0HVi7x2SOh0NUQQGNj0AA92ziqI06OU_Ab-Jl1j2qA9PX7hEFFhr1dmCk4CKYorVYKEdqc9ovS-10YcS-LRrHzn1POhISHt_WULW__B87av7-p2pzEWANWCeAPUAJMpsSj9-u76gsojPyOCyedEewN9drqfOHVcf8a3eu1a4Ons22k4VqZZV3UKSQbANUZP2q0293DPO8kQWm-PDi5YdT4IN2w3u97kGb1KI80C5Fd-XSwxx7nZtBRDe0kBvdVOUE6aFLm31lWhEw1Ng5WM4YvDaxAv1g7mmXHkIaEp20SRcMASuf2l1i68w"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xc4985cd891b929c548ef0de91ea04858b5722a43f68e9b3931b075722be0944fe30519af9fd8b4f812b97366d7f6088c55bdb2975b32b8e805694b6e7be9d394ba135ecddfff9cac74153e9a030dadfb3492ffe23193d6f904abcba854946daff1cf3ebaf39d2460629322f3afa4d670b190233f4da85922e8ff9c73b2d7b8bfb32e47224f3857d8c2d637b25d922b36b50c82a3361fe047707d7bd68741b52cad2414ba8db11a386a26958bc977d73aa99a8c4c28c2a9d6d15a329fff45da80bf1d2afd033aa405b3504c553cb0dbe4df42c150cf3df2a094f4881f7cbdfc47c2a217a2703d3535a2ec3870c210448b8505a4676e3728f21ca1a7bb4e5c9755")
+      (key-len 2048)
+      (pub-exp "0x05")
+      (sig "0xa54f2fad95e2fcd9760970b99965dbf31493104ebe4b37db1e66d15f37188b2070b949b8c4b7d4fc1eb3408f618894405bae2f8a8f8b3df0703e5ad540bc39deb153533ecd64d2dcac8fbffc481689db2b47ce8f4a44d0458faf19962f69de0c766445813537cbad67e3be7d8a3a2b613f0a7825178283a0375f7498018d9a337ba7865ad700360e584621c38e9f53f6fb20af223316ce737a863932a252dc76e16a09f8131fe7e06a9093d0f5964062fe71cd0417cf560512b073fca37d532d03043dd556031fce6518e5bcacdd8bf1d5c0e331b8081e99e561d6a6f1310ab49fe86eecac6a6c0df1421138df843385835311f50ebcd540b12001ac71f63343"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "mlH6z4BblJKWAlX_0XaxLTre-l-Khseb1NMjIuk6YOgBUv7zHgYoyZ6LeTQ7Si-PJrsAW40fehzc_WkpW6slCXon6QeAXRDmG13Slq8HAQUG3sbnrfwL654I51P3lVOWJNzJfjNZDgR7O3_KFpEKiY4KEd-uCS9-L4LwK8g6pvceD0mFM929BVvp-xHn-QUpWzVk488r7Oh04aq3dzFEmt5aOH17j6li60TnsUKqRhym4jpAj92zLY2OCT8mE8eNPlh9LnqrErcPTugvhNWRn7adxvrWqmdsA2lt8S1qGSLKwC5rFeFVhlLccfpw-tBfdaueUVtueYBPXvDov7yflw")
+      (key-len 2048)
+      (pub-exp "EQ")
+      (sig "FLbyM9egdM0uamW0JrcBd7uslj__AqNHyq0n0KMmfz-Ckf4Zx9Xph5e2kuL9uf393v_aigFnfNxH74lJ8HtWcMTFfyciXmWAybiT8W0U8A2KQHrRCxR8tkV33DoAnVzqlzdVFM3Ku3ZUPV_syE897X-_oJNONePDSI0WGgFHS8FeYlRHMLL7ao64JQr3nZnts-Usm_27h7z6qdU00puLo_9VNjJ6XK0I5sgksobLs2QxtFVn0_cI5bKVswTLSxmmqALarbLuwey_lOREY4chwG9S577m2MAafp-W4aVe3kAiK4F9xn7oBH8umO4x_HY1b6-SK2GcM2PPqf7Y8t_u-w"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xc057ddabc51868e53b06ebfa5a7794aba655786737f4867da07dbab11a8e2f08ccfac49ee282b1570dbf00e7023c88da6780b0dbafd7238d2ec6efee98263dc38d2d0d0787c571d2983eff03b09d84838d6cc5cc2f4015049d6660c31dbd02fc853b040133d8246e31688ae7010e67ead9e837dd3536b68caafb9fb46cb3c0e76d8253e3bfcec29c85b9c8f5d4c9feae4f9676d926c7ee177008bc65f4ceac8be2f90d922ac31704ce5cde3c24bd40d34dd27607035f50300c09c31d37f1533a6e1efdbca5e9089d2ca98a9cfaa5f87cd5916120203c1aa659efa828d2e4e13058c86c68a4e0c0d7386b77b67662f6b6f887cb17fad0ee11cdc23539322b54f3")
+      (key-len 2048)
+      (pub-exp "0x11")
+      (sig "0x237b678ccf473504f640c9cfa3b6b032f1b41631ab7c143f0a66736961cd8dbad04996ca3768e1b2b5ee3f4a265acee95193372467ec3da68942a05f4a553adb01107425d2f13f65f90f2f80769ac3dd1db222733233fb61e47dc08f6fe86912440c2598a2b4e94577d14b7726b300de83791c6f0a0cc0eeeef66792e13ce9b6ba6a930d5d9f71c962579c8cf27d299e952846b50bf133efc1fb8e085d65ed187502b0162cc9bf854d3747ec1d36fc6323cfee0c7abfbf54686c52ff41962e7134014a7b9a5c2048470f06217b3b4a919e88759736be20c8a5201cf7ab25962e4191ccb9b648fbfacf79509bc5907156c4caa156d0a79543436a322afe16e31d"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "n5FBGw94achmHJD0ArbYAEpLBHNRdWskm1S1RYZHPTk9JietFUUzZsgcHOE7rtp3RXCCW0pHiLAxizDJ4HrkQD8SD1_QnfQzB37JSgJTPB6tQmo1Lau9hZfVeegCNBAybBo6bczvfwd92ONtiZvD7N1sVgLywi_mjExD-FCtKXxId-XtfvvrdB-lEtpvaTUzRwoRsyyjgsi09d67b65aCYSBD3WV6HEKCgOyZZ1gc5GlB2WCjst6TCLMUKxI1mWbWG3OKGMP4rFyG1iuWT5yS-1HOE8J09eWp3HDXWVCosP8BXc7B6eiCbbFoVF-PJBHKPibiSWDvlUiLzBLK6W0QQ")
+      (key-len 2048)
+      (pub-exp "AQE")
+      (sig "BVh07lliQWGmolbmXItqPzQwpTgolTXr-wdl3Bs6SkqntUscKcjYJZPMt-lr5-2kxXzGXc5TgptIpOvEvKB4iL_EhX09GPEuVfwL8pRJFcNM4NLC851TtCa2487sb1lpcON2H48OU5sMxRGoQQZyx7fCyRimkrrBt9DTj-L4mMSnHm3IoIlBn2VALVcEsVFAVKFk6a-YwGKl7zeD2_v24RqLwLjrSwzLg8lHxdt64Rwps-S5TqHXj3Ut4qsiyuHoAjNDzYrCb1Z_P4BAtmjk043w6S2DGqRa_WjGt5io9APixZbeS2JsoLfVLkwH19rakjgfi5CeCtbV-1pAoREokg"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xc4d18bb5576b89e557e0b1057f697c37e4ec3c02353e4508a0e64b63c24bcb907e627e9abe63420d508a6bbecde0a4929874520a743881922685cdafeebca11622e8b883a8d462547e97bc9c4c549fe508efe39d945f1b3a4358354976d0f213bc91d3b11d740548f625697ee2d04b362caebb0b289ccdfd847c54bb79aef5c2bec01b258618ff7639da5d8d8b7802440f496c00e480d68c93136cde295502b884cc8487303c87d8fa65b48324341a79f985156e5b697d6395a44819a654c9f6a8863b777496e12efe1b8f794164983ec1e0639ed247e9ef610d7841eb7b4c36712aaad65607f8ce1e9bcf05a405a030799199a18729566506d847f85f922735")
+      (key-len 2048)
+      (pub-exp "0x0101")
+      (sig "0x26dc783a0f61bb2909adf1df1387a36f695cd91c7005c27867f92ce00c57bfacde3b28d60305ae35cb56349dc01e0a2dfd60d0c5de7a10fc052dfd797b0508cf2bfd3531090af9dc4a6e5082e01151ad607475b5064f9c839f3497f4e5d3cd263e195b4257dac1726e2b3a1392165d5662e796b596248f22c2d6a4a22f640aabcd10b981593f23b27e4852c2aa98a8ee5568bb03bba8c4188705aec03b87eb4eb9d9fd992d14b93adc778cd5c37acc6af6b8d5912168dddd281cc8e799b6b3e4b73693eeb728ecc8b3da7de48b34ae384af8d91632e4957737b0fca0a5e8587c5a36bbcedd9bfac0c20851a6730c4de935d913f7a280e67e980bf91edcda5917"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "xUT4vPY4NIqTE0aMxYLs9rRKt8a4qWm1rcNOYNhA1aOIAMZ4n7lubtETI3FLlJFxbLf8Z0oy2ijk3TMSMOuL4Qa8_uLComemeA84NSji_isfXTpQQnaQsx2Y9ppEBYB2o8Xpw536lTwma43fFxMg6hVYj1iN7J3AwsKWC6IgSD9GdRR9cMQ09Y7tg_zJeZgyBDL47hO0XDBgYN3vnKqsmK45YluxmGEI7mQ7y0NjxeI1h-6PKKCYicyWmhkHO-P3RF7ZypRVZvhds-WYz2l2bHBtd3ufWYKPVMBX5DnUwmaL7dLZ5NRgrJTg45d6j-SJYccFAoX7_H3Hdqo76nYgzQ")
+      (key-len 2048)
+      (pub-exp "AQAB")
+      (sig "BNvYH2zdWSQzKGSgT5MB0i5QRbPST2HKy4GBUGoiHw3uIKVEJfEwEJu9feODO3A89y0pCYJYxhszGW1h3hVPIBEKnmSJhMsb7R7pOMIgIKN_SjKxj-uwech1b0YUJj10dqgyoubUUuMcoAZM1HBaBE5w3bKZyzeHN6pJf_-o4Nr0zKBwUxpgm-30HEYPbKzNJ7UIiYOBlmDmCEFA3UfhONJ_UiJbkzHbyUxXL0FfUy9-DR6ZlxS1pysLzYasI9vZCZTz7Qa5D2LUHy7ULpMMhcu8UAbLlxfEnuzeNreNDlnhqc8D-2j6lJswm_Lwemic1wCjD5I4XpHHU0RMGoVqIg"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0x8656ca9ca433bae9467f04d6321ed461fefcf0e37d7393aadb9b254e010d2b24458680a30d7e42070a18cdbdb648a0060bcda90d61930856809d5433610aa219f602d1814c14e21494151c85bdcfa7756eedb2fdf7f9e6ae1a596606628cb19b81d69b823f77458b0a2caf98132463ef91e7fee6a498efd8c95ecdeebec3e0aaae8f3bd39501a38764e69fafbd1ad21afd42168a12116fc500048972eb2b0d1b349791ace87e0ea330030792c00b7c2ee3c1a206ae9d7802403c471307e925eaf6138db6126d0b11d4fb91b6ed0b1b9cce0066de4b3f39d16ba647ccacad6ed291aceb72359b7dc835689555aae8b39b0e9a622a8274d3a13231ebb493e44743")
+      (key-len 2048)
+      (pub-exp "0x010001")
+      (sig "0x6bf720445994ea54a2f4e1f13ae1f5af1521bb7fb33ea8352a75f717dc626be2d52135fc97fa91af0a17505c20e5ac47927d9a8b34649143460bf8f5582479c1e3292beb1395d2e0e5ecd63e483906d86b7a441d26a9d97b62148aa280f804229a876786cc9e9956c9a33e6eda82de0d6ced13c61c4dd71cb4f14b2185dd4609e17a5ce9b1720a4682ce2690ca15c31da895e090b35a6edb514c74b8216876a25077fdedbb6e55a39c1af2c318a13f188e536ebc13c88ac4a633009872280b4221ae54dac2fe3c6a887c46755b7fbc42bde7dbe91875ed1b584ac9bdfdff0c641a5aa6fcfbb28cd01e0b5d5d45cec08c1ac5c17ebca237113f2908009af8c936"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "2yJXBKvXdNl1fEcixVKOLYM9BJAQHRTeS5o1b0PzyRrEmJtvj_4Fg_SbSdN_-WMd4ckmjUrWO5s9WoBK56pk-Mq7Brug4wq0i4GzocLQqxGbKOHXXOh-5qS7qBVnSRBqVUrv5uXthMFdG36w_3Kq70kVi5IS5vxSK9EKDIzPF2t0-0GMzcS269TZf5q9uwf29CssIw5bXr816BJZ8_rZqUnyUvSBdGpOK3lBFY_gXcASqTaOFMqZ9OQrsDsSeCRY1yzFzCCTiLRt1Oe7HgOc-NxsdPg7aJGti4xVTbmcnFL9P031L05qcs8gXOkJETBT8nCU_hioEjo1qnzJuvB7E81VXEiX5ogTU-XJ-b85qIOgoBoUfGZNdssgnJeUQdqEh_xA5s-qpFCJTjRd6uoHjcE_utaK10KmDgmzHEaRPCrtueub3I1KbhA36r6-YiBoxEp04IacnFw478UihKe12o-r-c7UOI4gYH2UlAeAQVT_8xGkkgYYjBA_HRAWke1b")
+      (key-len 3072)
+      (pub-exp "BQ")
+      (sig "vU_QbZ05CduXyxHscpGESL1nEJmUVtLO2nGRjU8cKSFH3E8oVbXbJ_fbK2LJWm2ESonmHnr88asyYHWnJ-HjTZpSC4WClYBB3MK8AtQQrYH8euOi45y3X5v9mC5XXTX_GUW8CahABaPnjAypkUa2zKesN7mLlehHfIOSmFe3yZqLsUBc3Ohz8gsyXSButi9pPO4m1GEofmOdweURvHgKNDCkFd257wOdhCDe-DmWkKynf6cBJg_YqeHdpCmONO1sz6j20WodKXQKW2Qw1pLQRD7GhZROzdSptZ6tF95nYPT8vf9ItEHDhdDDyo3wRRguU-dTsmJySrlUAJ8it98oqB0EUmWcozCiMxxUkC3EDBY-ttBH9qu34GkOKsXLhmuSCdMpez32B2XefJ7bcS5Jx70zYMirj8YQ64AnvidleVvi366-KE-L7VKccw5Ym4iyryyvufRZYvCeUM726WaIOScUg50jVv5rb83Z-KnlinwA0CRh9JSaYIDIsLsigCje"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xbca697eba5ca146e0a1d521e8dbf8f4b6a153b9f93020b8ba7640f2303a8e6934a3fdc0f5b09b37ef3ea9df989d588e24ae75fdd4a22d50243809c82c1509fc1960e4df0b47638e3a2e9d7d9ce979f2c1eeacc3ea4557ba67926ac458b050dea34b1c0b0953a3289b78660411f97e8aec91b75d170e860d9c406f37888fb086fe58857bca798e0c33fc65b0a656db712302bba47775295a2fb61df4e4a21177fe9a428842db08687499aab0a01ba461545053f1c5bc6eac8ca44425dbe11a6a9e187b654e70e5f1ff74fbc25f2e323f4e1388053e6d74951cbe9a8d1d7586d4578073e956c8c6109e10bdb57f98755b6a82379059d2e45690b44d9d6cf2144c98398623f6fec02af31c0a364c4d93e44239ef577371631ccce83c1b6f785d8d3eefec482851c2cf2158b8338cf147a492f3d4fdbc03173a39c6012c873192c9bb9d36200b58c97fd064fd3beb8a2f7a6eede317bb629ca82b07e9a5fae3aeb30ddc23854e3411371a7356424eee0db6fb0938092839535ee579276af9e042cfd")
+      (key-len 3072)
+      (pub-exp "0x05")
+      (sig "0x978506278435d6de3190e1a196196f55ce25c62a4b4857ba1f7e47e3010820a10ac52d24a8c015398b2cc1efc2c0eec2b8367d9022fb20935a6a2a50ab7f4ef8810b00ce852db9ae9ceca7f1bc9a6ad5cb5999d8e9f511bc67e3955fb46dce439ca4e6eab1e247c98e944564c772cc51509d711a9bdd88409a085ded2d26db6688e17e4fe67391719539ea8f1c265e6803c1066a2b5197ff73fa3832316488054d7a0b15e826d70ef1d071f76b02aa16d27db560f33a3650e1fadb2e5aa12dc26c2f7c78b736f68522523ec9748d1999094a97bf7842dce46531fd544f5716d980bf1c3932a1aa1216ad1be74f604f1e6aa97755f0bcb05671ac109dc3206b2ff7138080939287d836c374a52297f986ea3c78c582825ea4f68f04fbf462153ed942ffb937858101f2a25514bb93ceadad6a68e2780e2ea35d2981038d9906d67086a19099148fb22f5faa515d35e8259125e899373a59d49ecf286c8b922db70a29eb891b9bec3b27555c185a929ea2f49da8207f31d321142f2337066bce3c"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "jpZLSdwW_hSEfKdUQqE4LGnURo7AgfBMziIlus_D-Ul9pvLvFWzGp5S_fmdwg3WbJl_g6p6bb1BIyY6hYK03FEor_jxRZQo8eogYh-FGtRGMLjpv3HD9Gm2UePf0xY2riCNg3c8r6XK326uphCBwoucgWXuMVGMtCUFOOtdZGQcRjBvRo80A_GaTffuN_8mgEkwUhVSwKrBg0Z-sAEGwjmSxC-Yzoi7aJTLYjoF7ubgWik_pniw3sjV6qvtlXFYmPbPfhMI6Ve-nUBzwyqkfvhR6Ok1_4ot0PU24PMFNt3LjYT4GmDIz39X-TTRJjA9SnkKhDbXw2DO1Gi0k6hk3tUNihsmYa72W4FeOPkpkqOnc_sLzXNZITMXJu-vshdj9F7IDPV3dxcH3p7oXNEqqTIE3-Ukw4ZvvRiWEEMH6eZjQvEuJEwHsYzzQDAbGYNPdZeu-UrhFWbnPlpF6cV_XYgWI8mUI292yqSfN_4rw67m3WG69fqETZ6AHbdA3NEQJ")
+      (key-len 3072)
+      (pub-exp "EQ")
+      (sig "He7MYNEkQST9FSUrQeTymZpVPpYGmVO_Eo0WZcWHpxwI05UFficDPUZDWwyy1khSmricxwpI2OTIKe9XMwRQATrDVDl6pRBCZvRBjTh_FEyqdICkJwQ-eU9P_6CFPqCg2rzuen6VTeVBNfPHcDk8bXYpGcmczaaZX9sMsYffFdENBr_s8vlGM2FvG_L2IZeufcMMC_m7fSvd1IANpmoJTueDvgCwo-Z6PlLnLP7g0bkETzAx--wIj5h40vWljrZ7vmE9cpRUnEx6weAkU0zCaJp4_wusDKhWfas2-YiL2tBzUz5FyYU1G1HpZti4n5w8L9h0440226hNljYsT9TkLMpgCEe0ANWBEneybjytFFumK618x2NanpL4NAoPCHO8FR1WuDZkh33DJTX9gxN5W2aNQUa8UJyHajQrBk9bo95oP0h22Fk3mpw7tvM7mGlfWRPZes5TVi98ZGML6U--aOIHbqBmSdKuLBej9FunvmUvke15H8U_FzCgpXlm_K-E"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xa28d2f5d271ddc236ece9b081b9747022b79bb0df15ace67273d60bfa8db1d00c6f26925a24d834827509214b011873bc9379a3e33a521229623b775c2d65c3d2cc7da46f44fd9f7f00d40c88a49da4a29c981fc307c589cd7e595d97b11c1fae4e3f732dd6325ccb07c0abaff6ab057a681d62e46be50821e54e4f0efa0f31f80bedb851282a3537556d78258378eb750746067bff837e938413fed7704c37ab397f2d6e04d3d91e383073d9d378debb7ff3f04b6b224261ca9fd9ad6bb9d811fdc8aa3b44a8acdfd0898e58ec8cbaa523aa3783faa786ea43167f863c8d95c4db31d1938dd2d62be3007c258aa8a79485355e164bdcb2f26e3fa107024bc6e2e4b789e4f1d2ce171cd3d4af6fcf8ab8b334b5a26653a6a1b5305ed2761d438873558f99befbc60ece0f4a4daca4d3ce7f447aaf0b9bd89aa7d7edea819a8ba88d573d3b2b9412f8279ea22f8087f416eaf4499017d31a433b9eea44897ce9a04ea729e793c8ade1438cc532f828df2447b68a18d540c9643380b269ce6cf39")
+      (key-len 3072)
+      (pub-exp "0x11")
+      (sig "0x7bd0c4bfa8fcf76e93572ff6fe95405c96144f9b046a492e53a5e7ae5ae93f6f18bb925834cdf135ffb9606cf9e7b7ae5b164162f086db36f1970eb0c9d9fb6676fb6d79eaa5b1c69f45d17da94ba5f552c0f27b90aecc5108b30bc69ccb898104db3e0994c738c88eb8939c445178b62c612acd9253b6039573c81ab5413f5600eb12d236c8c66bdbf7cae6884d28dc7efd7a3d26ec079b9dc5d4ead55175e89cae453f8f3c38bcba1db862424ccd46642ab437c327fedb1ab1c2eacbc10a7fd354be090d22e09ef25561435a859a25e1f37edaa2342c5f5c8c9c05c7124e13a222c70ab00e59d923b67973b3f02461f05c4b98e207f28c0ab6bbd0ad304a639a54c2312cb6de6b6a729a6012f517424f632120e31b5e1ba26cd0b29275edb0a59f3200efcd9c4db1ba5e3f6273fd8f59e7d4dab280245d3624826a41ee685ae8bd2c872b720f0ccecdec8e091c3240cb6fcc7f0ce5a6b99bc2dd3b2ceea23478e8ae75ddc1a036416ff832b33e64b9717f04e18b07e39125c259fb4b488b97"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "l44xkAcaS8MxOnvKgot10vN-KeDYTJsjJt8ndfbWdpH9aWk5AHRQkvnQnrvORt0p1W0ZvLn3Ji5MK2kxX5ZBtG3NE0Z7q6XNiKKrDqV41q_IQRw3FaFpFQ1nsgj5s1WIU-hxYPKZSa1atISDKv-ot4dKjEKJ-k0m-uKdNqfCiPWzNLn-y-adUA2QZC1ZmssD-8IUbmMvZ0mw-nkwUUp9Oh8wS_dD57uv3XzaxC6t_a0i4ZsZLVmy1_SAgyBdojKTeTIEKFbuiyJ1v2oCGNbmMnaK_32CRPbQBY9hdNfFT3RCzKOlprDXuILcjazTmiygraN7FRbvl7m7hrcsaRJvb95GYPdwAJ8cDLPFPYXp2AHCfA33k-G62QaVSq0xwbpH5Z9N6ryCjAkTna2EyXPjoqxamuZJFMhbG483Vv3yJEsgyneDhTzzD9yoX7rU_JA_e9e46Qg9oWh7aahtH8zh2dCMdJtrRZeDhHES_8zDRP8sg6Cdwuy5L32cCyCHlIW1")
+      (key-len 3072)
+      (pub-exp "AQE")
+      (sig "lXCCEmKW5foZw20RQ7pHEm_GAckKqSWFDRrVELXGK_THS1OBpKnMJSgsfIXBAlXFGBelyvjDPyyWAbf2qfqATCupGGcGZDfGKdalK0wCXP2GW0OekMjSe73AAGaE8E7z5gMz06RZnQ75ttkJreNohImmGcuzksrBaFIKC5x9AZrLaXOKzxO8P45RrM0acXMWg3WteP2HKYOKFrTtTS3dAhrj4FEJiO8z5zOiCkcOoRYVhtm4MiRvcKPOMMLUpFdEj3MZB9OEnm_N39UCih31UaTqwuyZYIU3dtmNdVKBnueP6yAEYUWX6i4Lu0aH56rXpoYbkdNksK3TOmQQaFxISI_8OeVWC7JXBsMc3usiq-1S2I7WoFCust5vM6ZPLTDpgJmrnEXXCj42BFA7K5Q3fWkrn071Gxasgj2Qnh4P03gLrqS2OTL47krktL-Sr1TtQH5zllEGFwv2Huh44hLDruYMSKQ0yhA_vxz3H2Hw2KfnYI4vnAMwIemiog0WYzRT"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xde875d178ed4550163dff663baade9765a6f48581abddf239d1261e0a8890a4cf08c73fc28c0eb302591de1e9bd0b69e9887b75328f2852a85e1a7f2e330b421ad37fd695332ae5ac27823dcf9758088bb25acea60f1afaef8ec71d8818215fcfb4bd4e97476462a40aa7bf0703499452cc4d17d63a7de939f0d8331fdd17c39395ea82b82299528ba5b37d6a69d88a7fcf546acbe067dbba6d9bdba7cab35cb09c42daa3e3c1f2f3989e3fd0b93e0bbd6f20720e7023ad163a5e12fc8fc5157d45b71d81cccd544b7d39e20d02743fcc0eda88554a06392b224e535d67ac112d116dd9216c623ec23185fe9016a629f8beff3d53c506207ae0955e3750f46b7c9fd5cbda404d97215f940918b992102086ed8a2e13cc265e9f0c265dffd92c201ae6ae7e4e6b75211c9245d7bbdd1a5243aded2e78058bc3c25055744a10330f43303586d7af2aacb2e445129218e72349d6109907337a03c572bf0cd2a1644ff5bcbe9bdd56759b6f7adb33178ebbe0857f8ff564921a975576f273693e9b5")
+      (key-len 3072)
+      (pub-exp "0x0101")
+      (sig "0x2d64a9591cd8f62f61aa547c73d696d64da9007c630f2621ca3dbbbfef6e2017b6f011a2057b93151ad63d7f790e4949f5567050cbe3bf1ea08bf7e135791ef78554d7e5a6a6a5aeb1acdc6f498bef8b346d960ab53dfdf5128effcc2774b1355c1864bd53133d9dd61fd73a49ec830537a9e7add730a9000cd97f2ac45b0ec13c1b4e58117f0b589703441bb6d26f3ec98ca378224fc523d2e4fdfe5b56062a1f55e8125b3137d6aa0f722883d3dde6a1695b3e2dfa0f0d7a295e9767ed0eb411ac8700fb986c5425d1aaa1eea2dfb4f9cccb479a405f970e3929273b50bf6ee5aa24cec91511aa3386d008407a6dde0eddc97d017e3404359d35264cfe38cda132766936334efde4f89afcbb28c52c6b5b659370347d52a35535f63c7c95d563f8a929d6672d1a2600019e7b693c6a7571f901d3e48367528cd892b90b0f8386a85e36769c404157c2cccfb4f4aa3b71518ba90ea0d95c1c0a09edcdf62b2cff19742c40a0c8ebf1a780d34ab5f188fa6392b914467e72b216b066bb29f6b1"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "ooKFRYvDvcuD_hHQ0QYOuqAA7Dq4aC1kEerVKSrpGu8lKHo_kECYECUBe6UhGKyxB-n8QZmGeIz0KdQhc5sF6xTcFjoAZvPATz-8btJIReh7pwdKOAnxCDOntP_37qX6OvVE0t7iPYYa7IqmEHTUpYs1Wi7yeIAyfQDUUiAL3QtykNRdcZnZ121vq4U_Cs1ze5bZYVcK040z-h2kWF8hNZyYVeuDHydEj3YqVv6bHWXUpqt48q0g6vmk0TxAbLQpgl4nzmActxb5TM3Cq9IZ07At_4DeL-opzOAhvJbSjr7uMN8YQ2xeGLEYxaAXh0pV-d89YrJCvvWgeHmjggyz4NuVNmeMYxLFdrUolPKoMAlWRBEI5UM1iVGX1wmI9J5uDUFEJRa7lH5o0QwKGsw0GS1Dx3f4YBeV9YHk5_kAMLTr6F1rw8rBJFGEwjGhdLe_3k2dWi_YSBpeoKqVXbGVTSnVjZBoFTdb8_IwHUCt0KWKuxrtAHNGQIqg2JgaayCR")
+      (key-len 3072)
+      (pub-exp "AQAB")
+      (sig "Co9fvb-7mnLmRCu6OK0Eh519JXy04M06EXuIeZA08rr8UrG_7TMkNIeUF1fy15NxXzxNvw7tww5WNlXAqsKyoLfLVVG9JOgVt0_YKjhFJ1RBmPNnTS3EjssfmxgwkGVSUfLhF0db5eSe4CWSKqXFtkSWZt4bBwD49lMacv0lqTPPxw5NS4u0VSZ1e7oCJi19n7ZpZfMhjTa8juX3bGp3G4O9qgJml2deHqDZ6cWs9MGKmcJ5BGP_KxUB6oTSZPezXwVXsDOH6Db_3-abrF8exsXgTznqGLWnQMulhLxQCEJM_sUYIcK0jdMdrbkhYSgWKyNr3SMHlH2uZmS-80U2uJ0tvye5mblNMxteWqZt3JSk6ob0NG9enRpQIoWWruWg8IYy9csfBbNuryUhTT1aM1kflGxYz1HH6QYlkazfC1K2XueYoYEDeISK2sbLnNgL6tWkEuoz6OkbU4K7Y7yYuHRbDRIRguDRIbaK05hZR7tokJ37V7lbBt61uV-tLBoN"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0x9dd317673d979c87b8dbbdeb4916887ece596e6bbe44736293f181b1483f2306cfce3ed5a8dfc47e819d84b47efb1051c283edd8a5dc1bca3b34143e4a72d5fbfa2f042dbcef403293a2a0d72934bf5b10fd4a31a68bac092485789ee3c0c2601732813c2a0fe87e42caec69d08215124cdfab11ad030faf94d2d40d45c368aa174deaa421065027f8d709d6dbf20017790271af8c3dfe06d779822db1fa25fd33b344aaad9bd30094774878f6e77ad1644004a571766067d298774fa79975b6801b8e04d7dbc1881dfbe2ed356b23ea12af7c6c91dc4849c7e34de303e0001d90d3a56d8171ed73feef106159259a76dfcaf58f22e51117118babdbfdba2a23d98e87fe837b1c798d6ee612f0de602ab00c59bd9a07f79c7b7c2df79ee5882473df71bfc6b485b7ed335c758787623e631474e0174437ae83cc108650720c46cb24d458cbdd248a5febf73a9999c808068a737fe5be67cfcf2e7bffaf3d0d3f1c2c13eca327efa25c3f223cfdd9a72b732f9055ea7f410697300fff2c8de07b")
+      (key-len 3072)
+      (pub-exp "0x010001")
+      (sig "0x2ae441fae1df818cb1098b0f3eb81a7c747cbafb04f7737be66df81c9a25641a714dcb85f2ab8ffb2bbb072e74088b49a2e9274817d94d584ead51ad6de46e41c69d4dcb7aca709b339a89891fb1ce94476fe225020b7193811223ec659d9872a750f02e216a13060bb0a22768abbd4946adf0d6858288040bad68350b3cfdca14fa884ba22aec400d1ebb16963b268b6577a334c3f00ee33df8debe6a616eb24fd5268b1b23bceab78053784854914208b2bb94ac57e2ee96da3bb6f4bdb9fcffda49779997e62627d579f0d33e6271a0059165428fe41b643254d6c4ee39313df5fc5cd916891c64d77d2e286b37dcda1c925cae4f89faa14b77fb2e26ef7913a890f447463d17e8c39e605bda973357a39664176db647517bcf8bb505957348d266543204fddfde708cdab48a1618445742ae526b2adae1f387b9649186d6f02499c0fab55aca9b5989ffbfe9c907bcd15e20414fe9c2e077024a99e82e645b6a59a147eda541aacc9bb78881e7fc27ac8b52b6aac495e6caffe08117f27b"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "sDxC_kCFejYHfv2_FREUlufTIhXQsRdNTATGhmiTdjoHNtxvJh5zY6b0FqRUNp6E4dzMPR3nu6yKfcdfTJQn78YNh_OEAkDHdyJAW5QQBEBXnE8onijquw2eARiJUXg4ZrUBMy4UZnLqfJkx8v2hiPkh0wb-p6PEPqbeZ4qj6_GZDZhzrYtRvXMpCHF-oOkFEiQ2Nf72yjZJluRHlxNQcDxiq0PoyeHPypUsVDGkRaayp52nX1uMifuok5T4L2fGpi5RuRAmWwhC8tW49w0HUi6b-QbxjJloK6so2YSyupCTjAyJcZKnYuyTMOW1Mcgg7cEolsBWTOPOWufKgKi6cY4M-tNBoF81jL8Ym9EMdTe3bu2PbZloeSGT0axLbtG9WSYEt8ks4y_f7WN3m7pL6nIgh3Ojxm311H6aTkdvVcO67vRUtWJWRDEqxZzwkFpdKeEMbXiIjrM4lqepiJ4RBJYBQX5-bt8XsenIeO1Knfyj6g_BGtMzoASDVCEJOfN6axucNLuTTb_P14bjdWqsu6RxGbBd0-RTv5jZK7Y6ZtQKImQlWj9pc0WEwnQK5QbdiKU5THM2Bl37se-rLDuNFPdruHrPLCvG8ZqODEZ4TlhY2AZCeAd3UyRA8LR-RBDD3yifJ4AMz9urt9uVHMXQbgLYS1jcmDYrR7mqognwXGc")
+      (key-len 4096)
+      (pub-exp "BQ")
+      (sig "ajsiIG4T939w2aJm3UiuY7hcpZvmuADiFMQvq8ST0CKudHOgdSbx-Ag29XylrRvArNkuaCMp_6R53D9ewi0xAc025So35G5HAZXRS4zsygRXfWpMv_ysYxDz51dV-1_-7h0m_lXMmdD6qcTpQTVHv0R-jLwN_eXSCftmUvTHKLunZnUeu7DkBg-7bnZeScvIyFnN-x2oL0SfprczuhDm29IulN_7hlyH0gtH-aMibYIjjOgoGF7mAYO-hjG6r-9br8SHQN3JuSqxE1i-GALP9rStZyEuNYWe-6_UeiChDd088Gsy22FF0SkBilKNAP-8wEUEX4B2zZDIEFaneDR_2OohovyXI5nAmjbKktCftMsCWjEEedrTIkB-lX6h19OtXZD-1RY_l5BYeFBoT2h7e5Z3gdV9n24BOdnzePtrrEDap7wMeOzAv2F2821ggkXpWeJIxKwzPp3j3AghASFDxx_Xcy83gVH7DI3MriPvuKndr2TO2ft3kPTvmvTzIRsekVUiV8Jh1ULn5ZGj6MM-aypfT0bAo-JaQMLdKZsh1rseetuGV82-UQIpu5CY-PazmPVT3hUcs3Uc4VXA9CYy3rgD5J5_06MqJdFhlFIiUk0WwjNROvS9AWTpL6qhHRW7AK-deWfWHyeF0jFmcwvDzfHdEIU_K43x62201mWYLkU"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xd3fb8347c5a4ef2db4ebfef6ac98f071818da54a50c6788a0a0c1baaa7fb17c690c6e9744617ff366da849953861f869af6d5014dedf94c7a9ef49c49d6d1809dce0f48521e1a557950dcd200ba4df5497215e386bae641217b744f6be360196c550535f1406316fc902be8470b3c063ba4f2bcc78807bfcfd1a19448ac979a47f181da2cb3b3631e1d0e7139c157c99e946cba97c00304e7041d04af5d4f1f497fdb3b9d4e3760cd691c14dfe13468c83f01613b3ba5ed3c66166a8c9e3f3c6d59c51371521215e88e676e50312fe8238f8caa6f43703e653238fdcf1d3e570410a5994a29d2327370204d0cea02caad6b2043fadaba58df134d8c68413307526e79b64c10a122423c8041438ffe16493becb161382d89a252e5c499fe54c31398377a2437d84db91a8303fa9049b7bc8a70718d693355707106de11eb4dd37de81d0afc76c9d8e914af28d1c7001b5e7c7c19bad6bab686fb0d2262bef5fa845ba4b80930c6c8f4f8c505490cc86f315d64c1e6578e4822ee5350540d3448128146a620f34b671f9bb54ba8478b05e35a36a7f44baa373f8bf4bc20a292bb62c47e778fa47d5b47e4c9a50196260f7173415157947e8e184fbab6f0bf255f2bcc12209a7e1d3f7fd1b3ecc5e6a24a4f9da20b003a91492468a4bfa53321509ed65a83be3db20ee07215af9253fac5e3ccc77a1b4e55cadb61642def96a2385")
+      (key-len 4096)
+      (pub-exp "0x05")
+      (sig "0x2bec3b7b261b5bdea7b98cb77ec356bee25a79b352d47cfb4b433d0684b9d9ebc90a7ef97d4f8c6938599fe14144b660a1e29ad94f16e2b19ffcb82613d075695565d7754599eef2c3821e58cb8f8ee2de0d7d09cd9a9741d3ef8cbacfbcc22e8a78d06f383f201f9e716a643ffc47f934524c0d062ff65f5e948d51546bbe9a4629ff3312f4996459e66d9a42554ec5dd883daa48259c2b3eb08be747f422c6e6d00052fcd67ab9ad3d78da80f138705789770273f9ba909c54e5594ade11ed485f92d6b53b56a722564aedefd5befffddf1ca18101a8b0237a934c2e67fbd3f8eb22f2c88c70cd2a8b65068404f7ca0a182574349c4a5ed46d0e257e1a84eaca90a014c94158d2830229967dad1f8f88d271c47f03d61c6da16d7bc1a958b8269858031de7da0d81765090eb4223c59528a110120d9f4044b8300dd766712ec4e23e566ce5b53277caa5d4bb38cde9a8947bcf8fe1a6f2586a590faf2ca243d60c657a0571e78e3eaa1b11606c3402cf803ee3a44f68b43501f53494e3bcb8af046def144f5816467356b24cbee7813ed2b57eeba55503b036d86ecda2716f91dbb174ecf87581a3a95f7d5b94fcaa54a4d96f6eb5a784b1e481bf67442b209ba7363c4b0b7e5dfb1bf3c90f9099d05bff984bdb1dbc7a0693b5b2ae96284413c3fed47691993ee2e6e7f7da3272ce6a666e2a24acf42cd80a634ef89b7bfa"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "xT5JwAKhGrSHk8Ff3dk0kt_BoeGs0um-vl2UxiYBgPuRu2KSqw2Btj67l1ioIpFKwh3aI6fntWXvoOtNSVIiuJoGRe2b2skGUHrqFS98gkrJ68e1C8NMWvhgntBfw6gcuic-vMCbZ6u2-OO0xSJHT_dj9dvr54Y4BAbxahqdY2CrVl71WOtIVjbHduwH2B4L40_FSeLhSe9kU86nES43_1HmhTWBrezecd3h55gBN-AFVRwUUGiqKjyYfFos31GN3Yrs3IOQGwCdJg0dgOpieS8gSEtmRyeqVxNfx7VccSHM1fT7YKrXDtWrcQgJsC0HCE2MyZdO7mP7gHu7lEZGWPYb7TpT0MxYIELv6CvX1qhltFD9FblPJdIyFl7-O8tnxUtbZEqi9Pxa9RTvQ83TWh9sxyO9qr4OgRIEwkaofa6Hpjrp7cxdrlHJU4Cclqt60ZGpS7MEIyQHhNs86eABFamFXVLeuoZMuJQDfmMGeXF_X-Eb8g2ixSBrdt5EMB1aQkFePb1ZXuavJfri0tzQnoUrod3Imq8QFfIIIrOA2RUFmELKtkV2N0LpgI4J4oXAflgqiLQDZk6NhCiR172i65P7eSAQKEXzKaUlgbi-1D0plDSd7Z2oTaAqOiGqRrUd3RiXo0toCxbEN6Qhq15qabxe4wwOvs_G9q8zOmsnHRc")
+      (key-len 4096)
+      (pub-exp "EQ")
+      (sig "F0RdMVdmUyGHajJT7CLhea1YOg0Rb4EjpiTOK7PNKD56Nh_RWlE_uvEJYtZR3unEMY4x-iVrYnqFNfEXYPhdyDqqeyqhOb3m5Th0IkXvfZWwfNwvs-7ia8hDrvVzZ1y0bXD097AwAU9Z2UkA5dnqeWsi7UYRUOWFAg4ms33VL_gzd0QudDxww5jEcP5EWr9z706mrDpudc9TDehTpKKi5FQuFd34p3DDKik1mBZuRXLI0dFeZjH0mDtVhM3S8zlf0kHAWlq5JNEktrJ6bePrL5PG3WLeK46w_Su-wHsJFEIGxSk-2AJcWIZBr7C3iz7xjgnDDPdqGFg7E7CRfcy2TNkVbrTGnIfzSR9h48vyax6NnCaaDn1F2ismhmvPjFdKWN52Y6g6oxLAEYVEr7SFiVACmBzdw86N-2Iz4Uc4b2lKumNALDkXx0Hexin8KeYTxWAYUgkEmCDBBeE4RYoBkUOMM1LJ7eJBIsbkNb_COyUKhKd-okHLLTU4_10mrf-748asU9sY5P6MjFHcIG-ajjlNb0-AhCa_flYoXByf8js-V55zQXNupE5hhHeQOuNMgprCRyjUgvZdi5soJO5NbkIHpFJGZhFmMMOH8EZCBK8SB_l2UmG-WW3Exqgme9E7o-nOGmtJSeeJcIG228L4rauprRtrT8b9v36iRZ1_Ciw"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xbb7225b08fbad36a73f13e358e840b9102e6dc713acff2512b521ed866f773a2422abd0ee6a9cf03536ae025a6615c5dd70e13670cdee5df5a7c29223d6e4b861713206f9a29db9d94dec169bbd82b35163f608e710ce47a8a9899cc3ed9d35831493b0bfc661664a8c4e58cc193a694ba88234d9db2ec1ca048f3a396a86b4ec2e5fc1af1d873d567aa2f7fd63a3a59274f4556a1503c1fa0b60a3c1674daeed89191f293bcabcfb54ef8d7f2e4746903f28b1d25abc490be886a6f3fcaa7b93408c2476b18aa08fee2f11a910beee7a183dea048c20ea1e6dd18dce320b8a2888f9181f4929afadf1279f11d14da852979a163b46db9f9890d29828e4ac99f8ffd94a63503a140bb63d24cf03eb88678938e07bc18cb462244623d3bdc68b0a5ce638ac509b2cb75b480967de6650da5b6874e89b2e3a0c3552a8be934e355dd493c7c06b62d70974fc83cc908e78b4a3dcb23677ba4f692a67ed01bbf18adae8ba5f54e04dbb6c3fb24411aca4f49ae3a5d2163e89e953589ccc483ebc72f78d248474a161da0f39ce711b4ad9c60dcdd0870ee02a3ea00d1bced26578cbc9ccbc53cea195b69fb1244b66fdb3c502d06f0d93a2ad1eca7a404a732f879214d7cb80af0971b500ff4e2e84807ad92580aa3fd67b12ffe8bb2c10c485df6ee049dbe5dd93fc0b50756b60eeaad4dc1483da4863b58f7098ee86885337eceaf")
+      (key-len 4096)
+      (pub-exp "0x11")
+      (sig "0xb5f37c7d16145b165dbd05ff5f5a9df6b72a2e2df85f8d6f3d1f33de6b11f3d5581f14f6e62561876a5ad46f3e135429acdb43ae4f2f60d20d590b7ee17b5964a8352ba45b99b81686487459f1fff0f4abb8b5647cd6d55d62036809bbc1c7fa9d155f8a001bb4f7ca8782862c96cd1612b9dd54ccf8822efff4e28dbfde3ddcd549a119d53c1697396b33774d8ed9688b471f8c453d4e5047745c2133dc6b3c493ac279aa29a780c9a5ec6990d5253335cfe5a817aa4178e232dfc89d52905e8edab64c42bbe0a6c819b7e28ad82cf3966d9723e1914299e5ab7d937ecfcec6fc5b285dacb523e944b6a571cb4f71094e75376e2e44d15f93d1f84bbdef93965aab134e423c44f03d2a39a28e6a368b87788d386fbdaf1b88183559ddbbd759f248507a33788603a56ccf8aab946bb037457af50256f2a50f401af507e1da90246dfd055b820bf0c91a4b4afe08a57650dcc8539e0d03eb152b297c8def8586024ab6bfa0305b68fd372691b53a462d288801f96e061053ab27edf9c5f27d7ff8d388b551f7d4e3c008ad2bcecb9530991dfa1aba0a82ea1d7eec86f90ffdde004d481b4809916573ccb797003ef8e4ae317ce2e003723287bd2d4f2636d4ce57a3a0da6b6fe3afbe175b38e916be5cc57f46ce4271f00ef1308613fbd85c2bcc99e9afcc5f9d1c638c35c3217daedbc93572b9064b5a64d85f4efdd50339f1"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "uCQFx8N6G-7fuPTLXciADhsu4bqdnubaH9vUnv784MDTjOpF6v-cATYQqHkoC-e9EYrHdRuidfz8U_Bo52xyIP5EnbX0AdZx4s0Y_ZuuaIqcgiwLch3Bg-NGQKThjITD--fPsjlKM2LnvREhrbTzK6LZbxlm_lUgDzuGCe0k4lMWLpWHGsQuKTMII_FTgf1Cr0IIDMSpnC42lwJA1I1qYi_ulBHe1bne3YOelFqlWoNK4vy9Iu21sWLe5Umlm_F8o1YId8IC_9G8WHVhg8J8Mlxdia1LJU-HfysZLYrjBJt9l1vFpCEkHR-LzJWBMsQO-Q2_LD5TbaDZ4yZIDRdi6JVzu4vN1dgNLeMGczuVielmf2HeNd8gVCUhLaUgeEc9ySyk5rC0gn_rEQDY1AWDqbexSS3iV6v3cyAQ3g-9Xai_2wW6T1ormFJYLe3Rsx00kCHTsIqKSzQphVOohvVGfOPuYoFQjNameMUyQ-goVlmzK1PAhcGmxAGUQA-kr7_o41GdLCs_8QHW7DzYMFJhih3_0QYK5z4XDTvaX6W5OKmbDIna_KyjUJujVdHmtQjJsE1MAexx7_9GjgEX8RmUXy28cMLmGMjqnOlrUTYpe2L1k8RQ74y9x4vRrkNG5OpnOqa_yMOVHwa0KOH_5OdjC4PO3k58qTk9vmAElWbKqok")
+      (key-len 4096)
+      (pub-exp "AQE")
+      (sig "GLsPUWBqc6qP-Rfiv14buzB5RI2bdhObYxQG8ma_g8Q_4c-Mq0oCoWCL_gMmYOF2ktZ_e0T2384MgaMBSv_9W6pYqkpsN8eff5gUnJto9DgjIfiaw4vmwIiYYeBhWdc36UXxx68Vc5yr9Qs2Zn4fY2POSTT_-RW3yXX5ucUN_6eba2QHBKB6jT_mK75a_Eox-VFDpKZg1kBeTN-KyLUqZBlu3uPjKQ90M7IqOpwKe3Y1UOMZL_HXy_toOOt8ohVeS0WZ_HkLkvt85ZPEOvk-bhISETI1lvUCfT4iyzoobLsvZPU8_s68_64lLH6KPP286QJhqmI43VDx_oyDUs_ilb0-_BG1AMW2K4m8MuTrG5ZDL3fM6YrzUDaB5UnBgSeCgknZpUvZKCWmxlVZs8Bv-aBcyxp3p8uNz6faK4HIil4Lbfzbn1HqtcOVkAbXqoMt7POFgfbAs3wLryi_pFlVIf2zJcaPdKCH6ARQJJPksUiJl9CPhWRrlZPxQ9ovBWQ776zH2q5keF1hAlgIR1vb-of5JlY_236VTfevgY0BmroJNFvDGsRsrlj20Z5ZFZr4GthPE7CFUM6suL0AyXzRxjIM76QnMNvBawTg_W7k0e_AQbAwZtdZGAX99zU3p4lkklb-_V37KlTDig8Cgp42xJ9MpxkBVtF2UPzVNtqPDw0"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0x8b62857837d951c49f7d17ad6ae3a73096aad9d97119e8fd09cb51362effcabdb38702c7d0de0a76bddc70f5ef6568750f7f5d69a0253b5b8424954269996a0f720aab26cfb7b8aa6d0d002aec0cdd40b52117498fdd9bef7de8d28d1bc50b1294c571fc8d2d0afc76ace6d523cac8cd7478bd46c3ef23f8c4ec5219362a10159e2a2bde82d22b4c36d2b02495d8fcc9767e8cd2e658ba4d0ca4611970ec4d119a4587dda4c6cba73087d0fddf8b111e7411b3a8880f5004bb320807177fcaffb212d7104f2644b14f903e628616aea450f7e6fb5c02e962dd1de8b59ec406f57fe5affcf0a15cda90086ca9fd55440d8a71ae3d4b26210ec955fa4f07efe0747de4fe9e6ce9fa21395013ac901696312c8170ce37efd3b9d0a5b892a805ac360ec5f1b4a86e9f8329307458c321857d88facd4804366f2121051487e0bba7c2af4cff4a84928a48be22063dd831b173c7b63e93d9fecaf9020811cd68e7b250b3decc8899d3bf2d52be4369e26aee9ab1d24a9ccb2e44e9b6a987eb7a8475d30d0470707d5f15f9f1f83fd4ac44593828980f2a39fa18609cd79ffebd749e057caa7896d70ef866709ee3b35397e026e9a2851d6ba54937925bdaae06e02f73cfc7eff9a80ef84bb3b7b5e80f424937eb2c7258b264b2f905c70fc0d8949c74420ece67fa6e8ba6ccf074aeba93dc5373ac031cc7a4ac3e08b5e8834d786953")
+      (key-len 4096)
+      (pub-exp "0x0101")
+      (sig "0x53fc3a0886845245a857cff97980675ce8df09c53709a29c7d7cf7677e74446055415b9b1ee3ddb6905bcb7cab0ba4c35f75e0b4e0892794581d44eb81002e63aec55383715ca2cc3e99b4903f89886788597162a448d679966f85069c80fe0105689fdda5848ad06508157d5baa06c3fa00efa6f96cb119d6c167b6475f711cc8fcfa49c590fd236b97ab25cfa393faf12f05e993ed58c01ed89b96088483a3d3552c5abaa98868aa28cab49cde7adf102269dcc9ff282de7f5cdc9f02792e8ff49618013987454c09bcef9791f9498c9d2344deb3163a2bf0fac6422dd815cd34ab65c9ebfd22c382d92f601722833be78c3d541261502a078a6f8d0d8f72fea15d1984315b23162b08e64817935a6b5a26523c8f0f55b4d3ae343f9edfb3e12f8df169cb38a1fcc5991af31669358f4b1cb057148b354365f02e2cd0017ddf2a8aecd1f6815bb365fba024786de8ad706beb1cd6d32c1246d15e87dd254a52e514da4991b087b7eb007db564f30da8cf7086f1911165a550d8a6fae1573aa05aa310cf97026bfbc85310b45caa00c19f1944329631e5797b76c1a694bad876a10d14d7b6cb4268610286ecd26deac34d333d42f594d0cf2a6f8e7e3be4575bbbc12d67f7d0a078475f8a33206770b864add8fd80cda55a9bc9c7e7feefd13c2a49655ef0483dac8685c87b2ec734d373cbf2265bb823e51f54c69d6f82db6"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "pD6VQNibpVWLJ1geoQc56Hq_2Xpn7h1ehPu5dhV7DHrvUejgf6HkWqt0aJM1IkQ-vsLIXh2BR1ef3A7KlQ72B9B65ru5d6RH48SfbxutMm_EUgCkNccxstIjwEH-tmTWHGdq6dvc_MBgLS02nk2ujCJRNvUMoqdLplMRycfZokOVtKu8fa2pTce46hCfQV5EX52ufCOdCPYdfnCXEskpgdL98r6TawEqRz4BGpN3n43w1UInE09DopGYajTLFehooWDOBFWK2yzIYqwtkD7oa7ZKibWAOH8ffkF1TywbHCIiBCjEAb3k8IFBuN_SywdOmHaAQJvaxquiPEvk1Xf9Uqx7cR0z3WtaWJgqbrZfwDLuIB0CWxlPkEPt59HYRembazpFVyNirnqXZPcBXHm4CyDgLzzQidTlnHbcKoWDsyaNNpeOCS0PAiWGsLOu7zZsjZPYOEsqZwbszFDsFpBQg31JrVFs-IVmLQj9aAtmQdMKsn1lr5GkDqYNT4ebI8O5YShI_GNoTXXnOdpT21wNhJaEU6vwOFX0THzRJ-B4voZFNZ8CiCEj-np8Irwx_weWdfjL-4s9FshQuGOpf5NT9FnLwCgX9DrY8F4DMm4EmyCotnJpEtPkRpSQYd0nVN4JLQPVv8zlRGZvgKJ9huETkDU4LQ4yGXACMpXYP_1wmoc")
+      (key-len 4096)
+      (pub-exp "AQAB")
+      (sig "kWt-n3gvwVerih5Rsho_WaZXT0FZIevbuB0EkVB4vkiV5rZRfu5cqsl6f50PCquoOzafL4H6RxLtqKTVFdxGK8ZaCrgksp-3nrH2EYdv09c3VKQFjWwHHzMm1Nt-_J23OCim0VnJPVBfURNtxy5MCc5FcAqK-Pq-sVZEFt98wWy9U5ZwaNW3vZAxwFtNkB5-etwhh2xoBDdWmwoebDP0IeGpy9JJxZhoeMsgwyyWP4prKEjS6Xgc1A3zeQZLCDp3tQAkOiglqiYZqdb7rC1i6z9Hb4lPucy6rZv-4ENig6O5wIds5hIe76L4D_4fAu8FWDrReOx3cXQIqDN76vEeJsbgoMqi0dYZimtFy4AkPOrQipqjetHy13IrgyPu7wxF0i6svq1tTSEs9imgu0q0g44Vt2E5QG6hUI-D1tbBD5KWRsiAlOvrx0-hmBq8k7kJOZ2Snr3fgURsZ1H3-twMz89TIMIyaW3UM1OGaWpnkVZp8QLycEcI_kE3prg8FyVr45v1ra_xYXowSuQrnVuAT1EsBZwsXYCBvN1vBs7ZKb5y92hXyhG5ovKKAPM6ThpJS98u1Q2j7qXiD_tIryVlx-Qh9eHvmWWl9pZtWSjmRPi6zfS_hUIpxW8l2c9IGKeYm_4S1xQtHIq9Gq5gNt8bwoXYV_t-qZW9y1dqc5FVBZk"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      
+
+(let ((pub-key "0xaca1e28ab78f7b7328cdeb3431b48da2d24e24702350c4b1b6ffb1d04758faaeab833b77092ecffacc7eee5fbdf8256289eca8b33340b5a3fbacba7c765ce496b85331c5b2fe98ceb650cce9805779cab3222f993cdd6662636ebc539ff4ec9f9798754a035aa3177b373802af914ccc64c4639a1fe7a380b46dd4e96fcfa57347c366425a3a109f0e6493164efca92bbe2502870b6ccf6a1f3a787d3e95d9c18d3c06d5fcd50e74e029aa1f4ea9ff0081924a8b0f140f1ef0ddaa404b37e26af5fd28a48b76866c9db550f4a51969b1f422c0762c1933d2bd49f94386a9048bd2b1ad547dff09537c7891a07def80711c7bf8d68cd6ae6ce2832135e211ecdfd67806a93827c47dbcfca0befbc3d162a7be83227c049d7c97da73820d00b96b680d8e05e4396eea01f78b84c7b6314f69cb39512d0f6ca7592e252703a156e18d9f27e2fb15a7cee2a84d5f2e67e427447a6f27dc97b733381e73fc0a8bf7a99382d7a6e6ce5ebcc43da51e88576be12a07185f7af4aa00cf7341d53bb9b38d0145e213a5ae5e23c30ddb28bc64a405f73b3c709615f14dc241dea86001768dc41b11a9ea94142144997aff29c3b057be5d096bce8af591af156211fe7af5005846c1645f16b7e07d3daae01cce6426e7f9b7d1b17a3220f29c6d0889a0f55d9e80825eeb66a33796492beb95a0b5be28a9f33fed44af7545de41d932339e07")
+      (key-len 4096)
+      (pub-exp "0x010001")
+      (sig "0x3f772cdfa99dab7a4509b7cce666fab4c994b93b988b007997c8ce7ed830218540de3bdba1f5f8d75321f71e3dbacd3af813824c916c69cb40bc8a760ea8b42d6e4b2024771daa1c1e9fe7a41324d736b74846b14fe3e74fb874a51fd78749234cd6bd763f17c9c4287f318d063f85a4bd653f050b44703985a635b43d5ece3c4bab994f8fd3e5a38f989dcc6a2f4ff248488dafe1aa0947c844829d9883f2ebf510cec8348a2000d72aaac09869f2cee77a4382b71a0bb8624d1430b85f1a6b2e0619d1b579a6ca5f7c3c5616f4283683c616da68dba3744e047033758c09451b3a6f0c9813b458856bf3f8ea307c011b047fd00ea2021760bae5b8f5a88cf7ac63315cbc29929bf9c81baa3a18e093f261065aa86b0c86e5a2abb25090dec3628494b5c3c524ab865c6bb75c27429339f3e0248170edd7baeee9bcceef7dcf2664538163779c245daf253460f10ad8d6029f3ebcac7e47460ca995a264d77eba25e894e65f38dd63470d47f43fae5455685573eba5dba9da754e7e27400aace82be99c663db67ebb26b56824ab6677048ef18bedc858fd8b3df20e9383eccf79783256cb59a7c753304dbcd36929219187a2b13108baf97ca79016fc0cecdcff56cf96d65cd9d8716ce54665d2dec5d0ef48f239f2357c7f5882b65261002da76f8ff94204a43046b7d13c941324d3a541db1e88176b0a7b00e44ea3b60bc8"))
+  (expect "Signature must be valid" true (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "Pact can do RSA signatures too!!"))
+  (expect "Signature is invalid" false (rsa.verify-pkcs1-v15 pub-key key-len pub-exp sig "This does not match with signature"))
+)
+
+
+      

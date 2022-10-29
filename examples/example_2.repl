@@ -1,0 +1,9 @@
+(load "../pact/contracts/rsa.pact")
+
+(print (format "Signture Result: {}" [
+(rsa.verify-pkcs1-v15 "0x00b4ebe70a0dc7e64f893b3839872881b9f7185add56abf21877d5acd8a1e9803399a638e48a79b75cbacc90562e97b59b5de0ef1f7a7cf5903dafacb62c45bd0423dd5cc097a730e0f47e58d7196149a3c6391082418763b7813b88cc8fcd0adb6bc128d6f8926d002d3306b7ba29d8d8797438a8fd1ef1a4884bca8069bfad1b"
+                      1024
+                      "0x10001"
+                      "K_C4lpq8tTw62-3iCFNNtDu0HiBonVFV7-6VoqlFzH7tOmq1Rm5a7GioMUtEmT9bNvopLzKynYJjw6pcgwYISbUz6BiMzfQg4jK8wLaxLkaQcPlDC9Dnx2sQXocl1pKt8HiZpWDmYzPXbPPlXN-l-jYFONHXm4iubMRY_-FV8uo"
+                      {'account:"My_Account_Name", 'index:1983})
+                                    ]))
