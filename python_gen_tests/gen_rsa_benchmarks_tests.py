@@ -27,12 +27,6 @@ def gen_sign_data(key_len, exponent=65537, output_b64=False):
     h.update(STRING_TO_SIGN.encode("ascii"))
     sig = pkcs1_15.new(k)
 
-    #print("Key: {:s}".format(HexBytes(k.n).hex()))
-    #print("Exponent: {:s}".format(HexBytes(k.d).hex()))
-    #print("Signature: {:s}".format(HexBytes(sig.sign(h)).hex()))
-
-
-
     if not output_b64:
         key, exp, sign = HexBytes(k.n).hex(), HexBytes(k.e).hex(), HexBytes(sig.sign(h)).hex()
     else:
