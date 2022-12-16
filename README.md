@@ -27,7 +27,7 @@ where:
  - msg: `any type` is the message signed by the sender.
 
 
-**Note**: We use the Pact serialization for computing the hash. If `msg` is not a string, it should be have been serialized before signing according to the *Pact rules* : https://github.com/kadena-io/pact/blob/master/src/Pact/Types/Codec.hs
+**Note**: We use the Pact serialization for computing the hash. If `msg` is not a string, it should have been serialized before signing according to the *Pact rules* : https://github.com/kadena-io/pact/blob/master/src/Pact/Types/Codec.hs
 
 
 ## Gas Usage
