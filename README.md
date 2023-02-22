@@ -32,7 +32,7 @@ where:
 
 ## Gas Usage
 
-(tested with Pact 4.4.1)
+(tested with Pact 4.6.0)
 
 | Key Size / Exp | 5      | 65537   |
 |----------------|--------|---------|
