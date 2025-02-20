@@ -1,3 +1,4 @@
+(enforce-pact-version "5.0")
 (load "../contracts/rsa.pact")
 
 (env-gasmodel "table")

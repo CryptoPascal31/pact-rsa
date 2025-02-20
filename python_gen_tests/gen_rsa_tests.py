@@ -52,7 +52,7 @@ def gen_sign_data(key_len, exponent=65537, output_b64=False):
       """.format(key, key_len, exp, sign, STRING_TO_SIGN, STRING_TO_SIGN_FALSE))
 
 
-
+print('(enforce-pact-version "5.0")')
 print('(load "../contracts/rsa.pact")\n')
 
 for s_len in (1024, 2048, 3072, 4096):

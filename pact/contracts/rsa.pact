@@ -31,10 +31,10 @@
 
   (defun --make-padding:integer (key-size:integer)
     "Private function to pre-generate at deployment time the PKCS#1-v1.5 signature padding"
-    (let* ((key-size-nibble (/ key-size 4))
-           (inner-length (fold (-) key-size-nibble [6 (length DIGEST-INFO) 64]))
-           (inner (concat (make-list inner-length "f")))
-           (header (concat ["0001" inner "00" DIGEST-INFO])))
+    (let ((key-size-nibble (/ key-size 4))
+          (inner-length (fold (-) key-size-nibble [6 (length DIGEST-INFO) 64]))
+          (inner (concat (make-list inner-length "f")))
+          (header (concat ["0001" inner "00" DIGEST-INFO])))
       (hex-to-big-int header))
   )
 
@@ -57,11 +57,11 @@
   (defun b64-to-big-int:integer (x:string)
     "Convert an base64 string to a big integer. Can accept string length up to 1024 chars"
     (if (> (length x) 512)
-        (let* ((x-len (length x))
-               (left-shift (* 6 (- x-len 512)))
-               (b64-offset (at (mod x-len 4) [0 0 4 2 ])))
+        (let ((x-len (length x))
+              (left-shift (* 6 (- x-len 512)))
+              (b64-offset (at (mod x-len 4) [0 0 4 2 ])))
           (| (shift (str-to-int 64 (take 512 x)) (- left-shift b64-offset)) (str-to-int 64 (drop 512 x))))
-      (str-to-int 64 x))
+        (str-to-int 64 x))
   )
 
   (defun str-to-big-int:integer (x:string)
@@ -75,23 +75,21 @@
       (| (shift padding 256) (str-to-int 64 hash-b64)))
   )
 
-  (defun rsa-decrypt (pub-key:integer pub-exponent:integer c-msg:integer)
+  (defun rsa-decrypt:integer (pub-key:integer pub-exponent:integer c-msg:integer)
     ;(mod (^ c-msg pub-exponent) pub-key)) ; => This is the naive implementation. That's works but takes millions of gas because of high memory usage.
 
     ; Here is a smarter approach: based on https://en.wikipedia.org/wiki/Modular_exponentiation (Right to left binary method)
     ; pub exponent in transformed to it's binary representation, and one bit is processed at each iteration.
-    ; fold transmits between  each iteration a list with 2 elements: [result, base] => Please refer to the algorithm on Wikipedia.
-    (at 0 (fold (lambda (x ex) (let* ((result (at 0 x))
-                                      (base (at 1 x))
-                                      (new-base (mod (* base base) pub-key)))
-                                  (if (= "1" ex)
-                                      [(mod (* result base) pub-key), new-base]
-                                      [result, new-base])))
-                [1, (mod c-msg pub-key)]
-                (reverse (str-to-list (int-to-str 2 pub-exponent)))))
+    ; fold transmits between each iteration an object with 2 elements: {'r:result, 'b:base} => Please refer to the algorithm on Wikipedia.
+    (at 'r (fold (lambda (x exponent-bit) (bind x {'r:=result, 'b:=base}
+                                            (if (= "1" exponent-bit)
+                                              {'r:(mod (* result base) pub-key), 'b:(mod (* base base) pub-key)}
+                                              {'r:result, 'b:(mod (* base base) pub-key)})))
+                 {'r:1, 'b:(mod c-msg pub-key)}
+                 (reverse (str-to-list (int-to-str 2 pub-exponent)))))
  )
 
-  (defun verify-pkcs1-v15 (pub-key:string  key-size:integer pub-exponent:string signature:string msg)
+  (defun verify-pkcs1-v15:bool (pub-key:string  key-size:integer pub-exponent:string signature:string msg)
     @doc "Main function to verify a signature. Returns true or false \
           \  - pub-key is the RSA N. Can be encoded in Base64URL or in hexa (must start with 0x) \
           \  - keys-size can be 512, 1024, 2048 or 3072 \
